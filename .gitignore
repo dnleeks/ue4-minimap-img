@@ -7,3 +7,5 @@ Saved/
 *.vcxproj
 *.xcodeproj
 *.suo
+/.vs/FPGame/v15
+*.user

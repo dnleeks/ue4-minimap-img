@@ -22,14 +22,14 @@ AFPGameCharacter::AFPGameCharacter()
 
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
-	FirstPersonCameraComponent->AttachParent = GetCapsuleComponent();
-	FirstPersonCameraComponent->RelativeLocation = FVector(0, 0, 64.f); // Position the camera
+	FirstPersonCameraComponent->AttachTo(GetCapsuleComponent());
+	FirstPersonCameraComponent->SetRelativeLocation(FVector(0, 0, 64.f)); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	Mesh1P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh1P"));
 	Mesh1P->SetOnlyOwnerSee(true);
-	Mesh1P->AttachParent = FirstPersonCameraComponent;
+	Mesh1P->AttachTo(FirstPersonCameraComponent);
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
 
