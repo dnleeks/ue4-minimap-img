@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class FPGameEditorTarget : TargetRules
 {
-	public FPGameEditorTarget(TargetInfo Target)
+	public FPGameEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 	}

@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class Minimap : ModuleRules
 {
-	public Minimap(TargetInfo Target)
+	public Minimap(TargetInfo Target) : base(Target)
 	{
 		
 		PublicIncludePaths.AddRange(
