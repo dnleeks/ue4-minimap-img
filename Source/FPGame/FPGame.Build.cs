@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class FPGame : ModuleRules
 {
-	public FPGame(TargetInfo Target) : base(Target)
+	public FPGame(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 	}
