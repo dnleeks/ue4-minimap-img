@@ -1,7 +1,9 @@
 ﻿#include "MinimapPrivatePCH.h"
-#include "MinimapWidget.h"
+#include "../Public/MinimapWidget.h"
 #include "CanvasPanel.h"
 #include "CanvasPanelSlot.h"
+#include "ConstructorHelpers.h"
+#include "Engine/Engine.h"
 #include "Image.h"
 #include "WidgetTree.h"
 
@@ -168,7 +170,7 @@ void UMinimapWidget::SetWaypointIconOutside(UImage* WaypointIcon, UTexture2D* Te
 
 	//Set icon rotation
 	float NewAngle = GetWaypointIconAngle(NewPos);
-	WaypointIcon->SetRenderAngle(NewAngle);
+	WaypointIcon->SetRenderTransformAngle(NewAngle);
 }
 
 void UMinimapWidget::SetWaypointIconInside(UImage* WaypointIcon, UTexture2D* Texture)
@@ -177,7 +179,7 @@ void UMinimapWidget::SetWaypointIconInside(UImage* WaypointIcon, UTexture2D* Tex
 	WaypointIcon->SetBrushFromTexture(Texture);
 
 	//Set icon rotation
-	WaypointIcon->SetRenderAngle(0.f);
+	WaypointIcon->SetRenderTransformAngle(0.f);
 }
 
 void UMinimapWidget::UpdateWaypointIcon(UUserWidget* TargetWidget, FName ChildIconName, FVector2D NewPos, UTexture2D* MainTexture, UTexture2D* ArrowTexture, float DefaultRadius)

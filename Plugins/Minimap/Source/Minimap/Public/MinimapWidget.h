@@ -3,10 +3,15 @@
 #include "Blueprint/UserWidget.h"
 #include "MinimapWidget.generated.h"
 
+class UImage;
+
 UCLASS(Abstract, editinlinenew, BlueprintType, Blueprintable, meta = (Category = "User Controls", DontUseGenericSpawnObject = "True"))
 class  UMinimapWidget : public UUserWidget
 {
-	GENERATED_UCLASS_BODY()
+	GENERATED_BODY()
+
+public:
+    UMinimapWidget(const FObjectInitializer& ObjectInitializer);
 
 protected:
 

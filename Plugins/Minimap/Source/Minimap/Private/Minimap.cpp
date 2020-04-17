@@ -1,7 +1,12 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
+#include "../Public/Minimap.h"
+
+
+
+#include "../Public/MinimapEdMode.h"
+#include "EditorModeRegistry.h"
 #include "MinimapPrivatePCH.h"
-#include "MinimapEdMode.h"
 
 #define LOCTEXT_NAMESPACE "FMinimapModule"
 

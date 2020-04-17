@@ -6,8 +6,12 @@ public class Minimap : ModuleRules
 {
 	public Minimap(ReadOnlyTargetRules Target) : base(Target)
 	{
-		
-		PublicIncludePaths.AddRange(
+
+        PrivatePCHHeaderFile = "Public/Minimap.h";
+
+        PCHUsage = PCHUsageMode.UseSharedPCHs;
+
+        PublicIncludePaths.AddRange(
 			new string[] {
 				"Minimap/Public"
 				// ... add public include paths required here ...
